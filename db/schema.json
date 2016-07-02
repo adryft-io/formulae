@@ -11,13 +11,13 @@
       "columns": [
         {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
         {"name": "name", "type": "string", "properties": {}},
-        {"name": "actionChannel", "type": "string", "properties": {}},
-        {"name": "actionFields", "type": "string", "properties": {}},
-        {"name": "actionName", "type": "string", "properties": {}},
-        {"name": "reactionChannel", "type": "string", "properties": {}},
-        {"name": "reactionName", "type": "string", "properties": {}},
-        {"name": "reactionFields", "type": "string", "properties": {}},
-        {"name": "userId", "type": "string", "properties": {}},
+        {"name": "action_channel", "type": "string", "properties": {}},
+        {"name": "action_fields", "type": "string", "properties": {}},
+        {"name": "action_name", "type": "string", "properties": {}},
+        {"name": "reaction_channel", "type": "string", "properties": {}},
+        {"name": "reaction_name", "type": "string", "properties": {}},
+        {"name": "reaction_fields", "type": "string", "properties": {}},
+        {"name": "user_id", "type": "string", "properties": {}},
         {"name": "created_at", "type": "datetime", "properties": {}},
         {"name": "updated_at", "type": "datetime", "properties": {}}
       ]
