@@ -14,7 +14,7 @@ module.exports = (function() {
     up() {
 
       return [
-        this.createTable("recipes", [{"name":"trigger_channel","type":"string"},{"name":"trigger_name","type":"string"},{"name":"trigger_fields","type":"string"},{"name":"action_channel","type":"string"},{"name":"action_name","type":"string"},{"name":"action_fields","type":"string"},{"name":"user_id","type":"string"}])
+        this.createTable("recipes", [{"name":"name","type":"string"},{"name":"actionChannel","type":"string"},{"name":"actionFields","type":"string"},{"name":"actionName","type":"string"},{"name":"reactionChannel","type":"string"},{"name":"reactionName","type":"string"},{"name":"reactionFields","type":"string"},{"name":"userId","type":"string"}])
       ];
 
     }
