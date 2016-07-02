@@ -1,8 +1,21 @@
 {
 
-  "migration_id": 2016062121165976,
+  "migration_id": 2016070223530730,
 
   "models": {
+
+    "Formula": {
+
+      "table": "formulas",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "user_id", "type": "string", "properties": {}},
+        {"name": "created_at", "type": "datetime", "properties": {}},
+        {"name": "updated_at", "type": "datetime", "properties": {}}
+      ]
+
+    },
 
     "Recipe": {
 
