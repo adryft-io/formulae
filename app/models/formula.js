@@ -4,11 +4,11 @@ module.exports = (function() {
 
   const Nodal = require('nodal');
 
-  class Formula extends Nodal.Model {}
+  class Formulae extends Nodal.Model {}
 
-  Formula.setDatabase(Nodal.require('db/main.js'));
-  Formula.setSchema(Nodal.my.Schema.models.Formula);
+  Formulae.setDatabase(Nodal.require('db/main.js'));
+  Formulae.setSchema(Nodal.my.Schema.models.Formulae);
 
-  return Formula;
+  return Formulae;
 
 })();

@@ -5,7 +5,7 @@ module.exports = (function() {
   const Nodal = require('nodal');
   const Formula = Nodal.require('app/models/formula.js');
 
-  class V1FormulasController extends Nodal.Controller {
+  class V1FormulaeController extends Nodal.Controller {
 
     index() {
 
@@ -61,6 +61,6 @@ module.exports = (function() {
 
   }
 
-  return V1FormulasController;
+  return V1FormulaeController;
 
 })();

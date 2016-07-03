@@ -4,22 +4,9 @@
 
   "models": {
 
-    "Formula": {
+    "Formulae": {
 
-      "table": "formulas",
-
-      "columns": [
-        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
-        {"name": "user_id", "type": "string", "properties": {}},
-        {"name": "created_at", "type": "datetime", "properties": {}},
-        {"name": "updated_at", "type": "datetime", "properties": {}}
-      ]
-
-    },
-
-    "Recipe": {
-
-      "table": "recipes",
+      "table": "formulae",
 
       "columns": [
         {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},

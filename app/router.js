@@ -31,8 +31,7 @@ module.exports = (function() {
 
   /* generator: begin imports */
 
-  const V1RecipesController = Nodal.require('app/controllers/v1/recipes_controller.js');
-  const V1FormulasController = Nodal.require('app/controllers/v1/formulas_controller.js');
+  const V1FormulaeController = Nodal.require('app/controllers/v1/formulae_controller.js');
 
   /* generator: end imports */
 
@@ -40,8 +39,7 @@ module.exports = (function() {
 
   /* generator: begin routes */
 
-  router.route('/v1/recipes/{id}').use(V1RecipesController);
-  router.route('/v1/formulas/{id}').use(V1FormulasController);
+  router.route('/v1/formulae/{id}').use(V1FormulaeController);
 
   /* generator: end routes */
 
