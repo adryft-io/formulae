@@ -3,24 +3,25 @@ module.exports = (function() {
   'use strict';
 
   const Nodal = require('nodal');
-  const Recipe = Nodal.require('app/models/recipe.js');
+  const Formula = Nodal.require('app/models/formula.js');
 
-  class V1RecipesController extends Nodal.Controller {
+  class V1FormulaeController extends Nodal.Controller {
 
     index() {
 
-      // this.respond(this.params.query.query);this.paras
-      Recipe.query()
+      Formula.query()
         .where(this.params.query)
         .end((err, models) => {
+
           this.respond(err || models);
+
         });
 
     }
 
     show() {
 
-      Recipe.find(this.params.route.id, (err, model) => {
+      Formula.find(this.params.route.id, (err, model) => {
 
         this.respond(err || model);
 
@@ -30,7 +31,7 @@ module.exports = (function() {
 
     create() {
 
-      Recipe.create(this.params.body, (err, model) => {
+      Formula.create(this.params.body, (err, model) => {
 
         this.respond(err || model);
 
@@ -40,7 +41,7 @@ module.exports = (function() {
 
     update() {
 
-      Recipe.update(this.params.route.id, this.params.body, (err, model) => {
+      Formula.update(this.params.route.id, this.params.body, (err, model) => {
 
         this.respond(err || model);
 
@@ -50,7 +51,7 @@ module.exports = (function() {
 
     destroy() {
 
-      Recipe.destroy(this.params.route.id, (err, model) => {
+      Formula.destroy(this.params.route.id, (err, model) => {
 
         this.respond(err || model);
 
@@ -60,6 +61,6 @@ module.exports = (function() {
 
   }
 
-  return V1RecipesController;
+  return V1FormulaeController;
 
 })();
