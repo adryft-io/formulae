@@ -1,8 +1,24 @@
 {
 
-  "migration_id": 2016070223530730,
+  "migration_id": 2016070518430094,
 
   "models": {
+
+    "Element": {
+
+      "table": "elements",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "type", "type": "string", "properties": {}},
+        {"name": "channel", "type": "string", "properties": {}},
+        {"name": "name", "type": "string", "properties": {}},
+        {"name": "fields", "type": "json", "properties": {}},
+        {"name": "created_at", "type": "datetime", "properties": {}},
+        {"name": "updated_at", "type": "datetime", "properties": {}}
+      ]
+
+    },
 
     "Formulae": {
 
