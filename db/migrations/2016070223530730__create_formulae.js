@@ -14,7 +14,7 @@ module.exports = (function() {
     up() {
 
       return [
-        this.createTable("formulae", [{"name":"name","type":"string"},{"name":"action_channel","type":"string"},{"name":"action_fields","type":"string"},{"name":"action_name","type":"string"},{"name":"reaction_channel","type":"string"},{"name":"reaction_name","type":"string"},{"name":"reaction_fields","type":"string"},{"name":"user_id","type":"string"}])
+        this.createTable("formulae", [{"name":"name","type":"string"},{"name":"action_channel","type":"string"},{"name":"action_fields","type":"json"},{"name":"action_name","type":"string"},{"name":"reaction_channel","type":"string"},{"name":"reaction_name","type":"string"},{"name":"reaction_fields","type":"json"},{"name":"user_id","type":"string"}])
       ];
 
     }
