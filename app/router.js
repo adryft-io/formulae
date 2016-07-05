@@ -32,6 +32,7 @@ module.exports = (function() {
   /* generator: begin imports */
 
   const V1FormulaeController = Nodal.require('app/controllers/v1/formulae_controller.js');
+  const V1TwilioController = Nodal.require('app/controllers/v1/twilio_controller.js');
 
   /* generator: end imports */
 
@@ -40,6 +41,7 @@ module.exports = (function() {
   /* generator: begin routes */
 
   router.route('/v1/formulae/{id}').use(V1FormulaeController);
+  router.route('/v1/twilio/{id}').use(V1FormulaeController);
 
   /* generator: end routes */
 
