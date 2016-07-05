@@ -9,12 +9,13 @@ module.exports = (function() {
 
     index() {
       console.log('this.params is: ', this.params);
-      conosle.log('heellooooo')
+      this.respond('hello')
+      console.log('heellooooo')
       Formula.query()
         .where(this.params.query)
         .end((err, models) => {
 
-          this.respond(err || models);
+          this.respond('err || models');
 
         });
 

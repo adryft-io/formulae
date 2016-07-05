@@ -41,7 +41,7 @@ module.exports = (function() {
   /* generator: begin routes */
 
   router.route('/v1/formulae/{id}').use(V1FormulaeController);
-  router.route('/v1/twilio/{id}').use(V1FormulaeController);
+  router.route('/v1/twilio/{id}').use(V1TwilioController);
 
   /* generator: end routes */
 
