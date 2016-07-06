@@ -48,6 +48,27 @@
           "validate": "^.+$"
         }
       }
+    }, {
+      "type": "reaction",
+      "channel": "slack",
+      "name": "send-group-message",
+      "fields": {
+        "channel": {
+          "label": "Channel",
+          "type": "text",
+          "validate": "^.+$"
+        },
+        "text": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
+        },
+        "token": {
+          "label": "Bot Token",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
     }]
   },
 
@@ -103,6 +124,27 @@
       "fields": {
         "wemoId": {
           "label": "Wemo Identifier",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "reaction",
+      "channel": "slack",
+      "name": "send-group-message",
+      "fields": {
+        "channel": {
+          "label": "Channel",
+          "type": "text",
+          "validate": "^.+$"
+        },
+        "text": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
+        },
+        "token": {
+          "label": "Bot Token",
           "type": "text",
           "validate": "^.+$"
         }
