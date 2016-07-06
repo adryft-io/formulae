@@ -1,8 +1,6 @@
 require('dotenv').config({ silent: true });
 var AWS = require('aws-sdk');
 AWS.config.update({region: process.env.AWS_REGION});
-var Consumer = require('sqs-consumer');
-var auth = process.env.AUTH_SERVICE_URL;
 var rp = require('request-promise');
 
 module.exports = (function() {
@@ -40,6 +38,7 @@ module.exports = (function() {
       var body = this.params.body.Body;
       var from = this.params.body.From;
       var props = {body: body, from: from};
+      var that = this
       Formula.query()
         .where({action_fields__json:{phone: from}})
         .where("reaction_channel=wemo")
@@ -53,12 +52,13 @@ module.exports = (function() {
           }
           console.log('result before stringified: ', result);
           result = JSON.stringify(result);
+          var sqs = new AWS.SQS();
           sqs.getQueueUrl({ QueueName: 'action' }, (err, data) => {
             if (err) return console.log(err);
             var queue = new AWS.SQS({params: {QueueUrl: data.QueueUrl}});
             console.log('Stringified Message being sent: ', result);
             queue.sendMessage({ MessageBody: result },(err, data) =>
-              (err ? console.log(err) : console.log(data)));
+              (err ? console.log(err) : that.respond(data)));
           });
       });
 
