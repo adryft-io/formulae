@@ -1,47 +1,117 @@
 {
-
   "development": {
-    "Element": [
-      {
-        "type": "action",
-        "channel": "gmail",
-        "name": "new-important",
-        "fields": {
-          "phone": "+1",
-          "message": "configure your message here"
-        }
-      },
-      {
-        "type": "action",
-        "channel": "gmail",
-        "name": "new-starred",
-        "fields": {
-          "phone": "+1",
-          "message": "configure your message here"
-        }
-      },
-      {
-        "type": "reaction",
-        "channel": "twilio",
-        "name": "recieve an sms",
-        "fields": {
-          "phone": "+1",
-          "message": "configure your message here"
-        }
-      },
-      {
-        "type": "action",
-        "channel": "twilio",
-        "name": "send an sms",
-        "fields": {
-          "phone": "+1",
-          "wemoId": "configure your message here"
+    "Element": [{
+      "type": "action",
+      "channel": "gmail",
+      "name": "new-important",
+      "fields": {}
+    }, {
+      "type": "action",
+      "channel": "gmail",
+      "name": "new-starred",
+      "fields": {}
+    }, {
+      "type": "action",
+      "channel": "twilio",
+      "name": "receive-sms",
+      "fields": {
+        "phone": {
+          "label": "Phone Number",
+          "type": "text",
+          "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        },
+        "message": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
         }
       }
-    ]},
+    }, {
+      "type": "reaction",
+      "channel": "twilio",
+      "name": "send-sms",
+      "fields": {
+        "phone": {
+          "label": "Phone Number",
+          "type": "text",
+          "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        },
+        "message": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "reaction",
+      "channel": "wemo",
+      "name": "power",
+      "fields": {
+        "wemoId": {
+          "label": "Wemo Identifier",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }]
+  },
 
   "test": {},
 
-  "production": {}
-
+  "production": {
+    "Element": [{
+      "type": "action",
+      "channel": "gmail",
+      "name": "new-important",
+      "fields": {}
+    }, {
+      "type": "action",
+      "channel": "gmail",
+      "name": "new-starred",
+      "fields": {}
+    }, {
+      "type": "action",
+      "channel": "twilio",
+      "name": "receive-sms",
+      "fields": {
+        "phone": {
+          "label": "Phone Number",
+          "type": "text",
+          "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        },
+        "message": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "reaction",
+      "channel": "twilio",
+      "name": "send-sms",
+      "fields": {
+        "phone": {
+          "label": "Phone Number",
+          "type": "text",
+          "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        },
+        "message": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "reaction",
+      "channel": "wemo",
+      "name": "power",
+      "fields": {
+        "wemoId": {
+          "label": "Wemo Identifier",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }]
+  }
 }
