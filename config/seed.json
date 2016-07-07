@@ -13,7 +13,7 @@
     }, {
       "type": "action",
       "channel": "twilio",
-      "name": "receive-sms",
+      "name": "send-sms",
       "fields": {
         "phone": {
           "label": "Phone Number",
@@ -24,17 +24,12 @@
     }, {
       "type": "reaction",
       "channel": "twilio",
-      "name": "send-sms",
+      "name": "recieve-sms",
       "fields": {
         "phone": {
           "label": "Phone Number",
           "type": "text",
           "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
-        },
-        "message": {
-          "label": "Message",
-          "type": "text",
-          "validate": "^.+$"
         }
       }
     }, {
