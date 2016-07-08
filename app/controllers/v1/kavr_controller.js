@@ -40,7 +40,7 @@ module.exports = (function() {
       var props = {body: body, from: from};
       var that = this
       Formula.query()
-        .where({action_fields__json:{kavrid: from}})
+        .where({action_fields__json:{userid: from}})
         .where("reaction_channel=wemo")
         .end((err, models) => {
           console.log('this is first model: ', models[0]._data)
