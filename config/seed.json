@@ -33,6 +33,17 @@
         }
       }
     }, {
+      "type": "action",
+      "channel": "kavr",
+      "name": "siri",
+      "fields": {
+        "sirname": {
+          "label": "Your Name",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
       "type": "reaction",
       "channel": "twilio",
       "name": "recieve-sms",
