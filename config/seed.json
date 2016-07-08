@@ -23,37 +23,20 @@
       }
     }, {
       "type": "action",
-      "channel": "wemo",
-      "name": "coming soon",
-      "fields": {
-        "wemoId": {
-          "label": "Wemo Identifier",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
-    }, {
-      "type": "action",
-      "channel": "slackbot",
-      "name": "message",
-      "fields": {
-        "name": {
-          "label": "Slack User",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
-    }, {
-      "type": "action",
       "channel": "kavr",
       "name": "siri",
       "fields": {
-        "kavrid": {
-          "label": "kavrid",
+        "userid": {
+          "label": "userid",
           "type": "text",
           "validate": "^.+$"
         }
       }
+    }, {
+      "type": "action",
+      "channel": "wemo",
+      "name": "coming soon",
+      "fields": {}
     }, {
       "type": "reaction",
       "channel": "twilio",
@@ -83,7 +66,7 @@
       }
     }, {
       "type": "reaction",
-      "channel": "slackbot",
+      "channel": "slack",
       "name": "send-group-message",
       "fields": {
         "channel": {
@@ -127,26 +110,9 @@
           "label": "Phone Number",
           "type": "text",
           "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
-        }
-      }
-    }, {
-      "type": "action",
-      "channel": "wemo",
-      "name": "coming soon",
-      "fields": {
-        "wemoId": {
-          "label": "Wemo Identifier",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
-    }, {
-      "type": "action",
-      "channel": "slackbot",
-      "name": "message",
-      "fields": {
-        "name": {
-          "label": "Slack User",
+        },
+        "message": {
+          "label": "Message",
           "type": "text",
           "validate": "^.+$"
         }
@@ -156,12 +122,17 @@
       "channel": "kavr",
       "name": "siri",
       "fields": {
-        "kavrid": {
-          "label": "kavrid",
+        "userid": {
+          "label": "userid",
           "type": "text",
           "validate": "^.+$"
         }
       }
+    }, {
+      "type": "action",
+      "channel": "wemo",
+      "name": "coming soon",
+      "fields": {}
     }, {
       "type": "reaction",
       "channel": "twilio",
@@ -191,7 +162,7 @@
       }
     }, {
       "type": "reaction",
-      "channel": "slackbot",
+      "channel": "slack",
       "name": "send-group-message",
       "fields": {
         "channel": {
@@ -211,5 +182,5 @@
         }
       }
     }]
-  },
+  }
 }
