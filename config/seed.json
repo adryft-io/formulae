@@ -12,13 +12,24 @@
       "fields": {}
     }, {
       "type": "action",
-      "channel": "twilio",
-      "name": "send-sms",
+      "channel": "wemo",
+      "name": "switch",
       "fields": {
-        "phone": {
-          "label": "Phone Number",
+        "wemoId": {
+          "label": "Wemo Identifier",
           "type": "text",
-          "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "action",
+      "channel": "slackbot",
+      "name": "message",
+      "fields": {
+        "name": {
+          "label": "Slack User",
+          "type": "text",
+          "validate": "^.+$"
         }
       }
     }, {
@@ -37,8 +48,8 @@
       "channel": "kavr",
       "name": "siri",
       "fields": {
-        "sirname": {
-          "label": "Your Name",
+        "kavrid": {
+          "label": "kavrid",
           "type": "text",
           "validate": "^.+$"
         }
