@@ -22,6 +22,17 @@
         }
       }
     }, {
+      "type": "action",
+      "channel": "slackbot",
+      "name": "message",
+      "fields": {
+        "name": {
+          "label": "Slack User",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
       "type": "reaction",
       "channel": "twilio",
       "name": "recieve-sms",
@@ -50,7 +61,7 @@
       }
     }, {
       "type": "reaction",
-      "channel": "slack",
+      "channel": "slackbot",
       "name": "send-group-message",
       "fields": {
         "channel": {
@@ -97,6 +108,17 @@
         },
         "message": {
           "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "action",
+      "channel": "slackbot",
+      "name": "message",
+      "fields": {
+        "name": {
+          "label": "Slack User",
           "type": "text",
           "validate": "^.+$"
         }
