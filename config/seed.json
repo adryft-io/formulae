@@ -4,24 +4,12 @@
       "type": "action",
       "channel": "gmail",
       "name": "new-important",
-      "fields": {
-        "message": {
-          "label": "Message",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
+      "fields": {}
     }, {
       "type": "action",
       "channel": "gmail",
       "name": "new-starred",
-      "fields": {
-        "message": {
-          "label": "Message",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
+      "fields": {}
     }, {
       "type": "action",
       "channel": "twilio",
@@ -42,6 +30,11 @@
           "label": "Phone Number",
           "type": "text",
           "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        },
+        "message": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
         }
       }
     }, {
@@ -86,24 +79,12 @@
       "type": "action",
       "channel": "gmail",
       "name": "new-important",
-      "fields": {
-        "message": {
-          "label": "Message",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
+      "fields": {}
     }, {
       "type": "action",
       "channel": "gmail",
       "name": "new-starred",
-      "fields": {
-        "message": {
-          "label": "Message",
-          "type": "text",
-          "validate": "^.+$"
-        }
-      }
+      "fields": {}
     }, {
       "type": "action",
       "channel": "twilio",
@@ -129,6 +110,11 @@
           "label": "Phone Number",
           "type": "text",
           "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        },
+        "message": {
+          "label": "Message",
+          "type": "text",
+          "validate": "^.+$"
         }
       }
     }, {
