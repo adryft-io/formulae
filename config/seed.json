@@ -12,22 +12,20 @@
       "fields": {}
     }, {
       "type": "action",
-      "channel": "wemo",
-      "name": "switch",
-      "fields": {
-        "wemoId": {
-          "label": "Wemo Identifier",
-          "type": "text",
-          "validate": "^.+$"
-        }
+      "channel": "twilio",
+      "name": "send-sms",
+      "phone": {
+        "label": "Phone Number",
+        "type": "text",
+        "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
       }
     }, {
       "type": "action",
-      "channel": "slackbot",
-      "name": "message",
+      "channel": "wemo",
+      "name": "coming soon",
       "fields": {
-        "name": {
-          "label": "Slack User",
+        "wemoId": {
+          "label": "Wemo Identifier",
           "type": "text",
           "validate": "^.+$"
         }
