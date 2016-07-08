@@ -14,10 +14,12 @@
       "type": "action",
       "channel": "twilio",
       "name": "send-sms",
-      "phone": {
-        "label": "Phone Number",
-        "type": "text",
-        "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+      "fields": {
+        "phone": {
+          "label": "Phone Number",
+          "type": "text",
+          "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
+        }
       }
     }, {
       "type": "action",
@@ -125,9 +127,15 @@
           "label": "Phone Number",
           "type": "text",
           "validate": "^\\+1([0-9]{3})([0-9]{3})([0-9]{4})$"
-        },
-        "message": {
-          "label": "Message",
+        }
+      }
+    }, {
+      "type": "action",
+      "channel": "wemo",
+      "name": "coming soon",
+      "fields": {
+        "wemoId": {
+          "label": "Wemo Identifier",
           "type": "text",
           "validate": "^.+$"
         }
@@ -139,6 +147,17 @@
       "fields": {
         "name": {
           "label": "Slack User",
+          "type": "text",
+          "validate": "^.+$"
+        }
+      }
+    }, {
+      "type": "action",
+      "channel": "kavr",
+      "name": "siri",
+      "fields": {
+        "kavrid": {
+          "label": "kavrid",
           "type": "text",
           "validate": "^.+$"
         }
@@ -172,7 +191,7 @@
       }
     }, {
       "type": "reaction",
-      "channel": "slack",
+      "channel": "slackbot",
       "name": "send-group-message",
       "fields": {
         "channel": {
@@ -192,5 +211,5 @@
         }
       }
     }]
-  }
+  },
 }
