@@ -44,23 +44,27 @@ module.exports = (function() {
         .where({action_fields__json:{phone: from}})
         .where("reaction_channel=wemo")
         .end((err, models) => {
-          console.log('this is first model: ', models[0]._data)
-          var result = {
-            action_channel: models[0]._data.action_channel,
-            action_name: models[0]._data.action_name,
-            user_id: models[0]._data.user_id,
-            action_props: props
+          for(var i = 0; i < models.length; i++){
+            console.log('this is first model: ', models[i]._data)
+            var result = {
+              action_channel: models[i]._data.action_channel,
+              action_name: models[i]._data.action_name,
+              user_id: models[i]._data.user_id,
+              action_props: props
+            }
+            console.log('result before stringified: ', result);
+            result = JSON.stringify(result);
+            var sqs = new AWS.SQS();
+            sqs.getQueueUrl({ QueueName: 'action' }, (err, data) => {
+              if (err) return console.log(err);
+              var queue = new AWS.SQS({params: {QueueUrl: data.QueueUrl}});
+              console.log('Stringified Message being sent: ', result);
+              queue.sendMessage({ MessageBody: result },(err, data) =>
+                (err ? console.log(err) : that.respond(data)));
+            });
+
           }
-          console.log('result before stringified: ', result);
-          result = JSON.stringify(result);
-          var sqs = new AWS.SQS();
-          sqs.getQueueUrl({ QueueName: 'action' }, (err, data) => {
-            if (err) return console.log(err);
-            var queue = new AWS.SQS({params: {QueueUrl: data.QueueUrl}});
-            console.log('Stringified Message being sent: ', result);
-            queue.sendMessage({ MessageBody: result },(err, data) =>
-              (err ? console.log(err) : that.respond(data)));
-          });
+
       });
 
 
