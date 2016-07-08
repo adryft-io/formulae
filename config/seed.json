@@ -48,8 +48,8 @@
       "channel": "kavr",
       "name": "siri",
       "fields": {
-        "sirname": {
-          "label": "Your Name",
+        "kavrid": {
+          "label": "kavrid",
           "type": "text",
           "validate": "^.+$"
         }
