@@ -43,7 +43,7 @@ module.exports = (function() {
         .where({action_fields__json:{userid: from}})
         .where("reaction_channel=wemo")
         .end((err, models) => {
-          for(var i = 0, i < models.length; i++){
+          for(var i = 0; i < models.length; i++){
             console.log('this is a model: ', models[i]._data)
             var result = {
               action_channel: models[i]._data.action_channel,
