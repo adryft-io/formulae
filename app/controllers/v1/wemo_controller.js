@@ -1,8 +1,3 @@
-require('dotenv').config({ silent: true });
-var AWS = require('aws-sdk');
-AWS.config.update({region: process.env.AWS_REGION});
-var rp = require('request-promise');
-
 module.exports = (function() {
 
   'use strict';
@@ -10,7 +5,7 @@ module.exports = (function() {
   const Nodal = require('nodal');
   const Formula = Nodal.require('app/models/formula.js');
 
-  class V1TwilioController extends Nodal.Controller {
+  class V1WemoController extends Nodal.Controller {
 
     index() {
 
@@ -67,6 +62,6 @@ module.exports = (function() {
 
   }
 
-  return V1TwilioController;
+  return V1WemoController;
 
 })();
