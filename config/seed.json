@@ -18,7 +18,7 @@
         "phone": {
           "label": "Phone Number",
           "type": "text",
-          "validate": "^\\([0-9]{3})([0-9]{3})([0-9]{4})$"
+          "validate": "^([0-9]{3})([0-9]{3})([0-9]{4})$"
         }
       }
     }, {
@@ -56,7 +56,7 @@
         "phone": {
           "label": "Phone Number",
           "type": "text",
-          "validate": "^\\([0-9]{3})([0-9]{3})([0-9]{4})$"
+          "validate": "^([0-9]{3})([0-9]{3})([0-9]{4})$"
         },
         "message": {
           "label": "Message",
@@ -120,7 +120,7 @@
         "phone": {
           "label": "Phone Number",
           "type": "text",
-          "validate": "^\\([0-9]{3})([0-9]{3})([0-9]{4})$"
+          "validate": "^([0-9]{3})([0-9]{3})([0-9]{4})$"
         }
       }
     }, {
@@ -158,7 +158,7 @@
         "phone": {
           "label": "Phone Number",
           "type": "text",
-          "validate": "^\\([0-9]{3})([0-9]{3})([0-9]{4})$"
+          "validate": "^([0-9]{3})([0-9]{3})([0-9]{4})$"
         },
         "message": {
           "label": "Message",
